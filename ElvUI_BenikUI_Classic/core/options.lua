@@ -39,10 +39,77 @@ local DONATORS = {
 	'Christopher S-C.',
 	'George McC.',
 	'Christian S.',
-	'Joerg B.',
+	'Ric F.',
+	'LincGG',
+	'bazooka',
+	'JackedNerd',
+	'Jaxx',
+	'Nightwalker559',
+	'Travis J.',
+	'Apostolis',
+	'Geert-Jan',
+	'Lisa T.',
+	'Vlad P.',
+	'Esa L.',
 }
-tsort(DONATORS, function(a, b) return a < b end)
+tsort(DONATORS, function(a, b) return E:StripString(a) < E:StripString(b) end)
 local DONATOR_STRING = tconcat(DONATORS, ", ")
+
+local PATRONS = {
+	'thurin',
+	'cry1n',
+	'Beleynn',
+	'Rezzurect',
+	'Blom',
+	'bazooka',
+	'Ascor',
+	'beyornd',
+}
+tsort(PATRONS, function(a, b) return E:StripString(a) < E:StripString(b) end)
+local PATRONS_STRING = tconcat(PATRONS, ", ")
+
+local CODING = {
+	'Elv',
+	'Tukz',
+	'Blazeflack',
+	'Azilroka',
+	'Darth Predator',
+	'Sinaris',
+	'Hydra',
+	'Merathilis',
+	'Nihilistzsche',
+	'Repooc',
+	'Pristie (frFR)',
+	'|cffff005athurin|r',
+	'|TInterface/AddOns/ElvUI/Media/ChatLogos/Hibiscus:15:15:0:0:64:64:5:59:5:59|t Simpy',
+	'Cara (ptBR)',
+	'nadugi (koKR)',
+}
+tsort(CODING, function(a, b) return E:StripString(a) < E:StripString(b) end)
+local CODING_STRING = tconcat(CODING, ", ")
+
+local NITRO = {
+	'Runew0lf',
+	'Kullerkeks',
+	'Roxanne',
+}
+tsort(NITRO, function(a, b) return E:StripString(a) < E:StripString(b) end)
+local NITRO_STRING = tconcat(NITRO, ", ")
+
+local TESTERS = {
+	'Kringel',
+	'Roxanne',
+	'BuG',
+	'Semprini',
+	'Vxt',
+	'V4NT0M',
+	'Obscurrium',
+	'ElvUI community',
+	'Botanica',
+	'Luckyone',
+}
+tsort(TESTERS, function(a, b) return E:StripString(a) < E:StripString(b) end)
+local TESTERS_STRING = tconcat(TESTERS, ", ")
 
 	StaticPopupDialogs["BENIKUI_CREDITS"] = {
 		text = BUI.Title,
@@ -413,11 +480,11 @@ local function Core()
 						name = BUI:cOption(L['Coding']),
 						guiInline = true,
 						args = {
-							tukui = {
+							str = {
 								order = 1,
 								type = 'description',
 								fontSize = 'medium',
-								name = format('|cffffd200%s|r', 'Elv, Tukz, Blazeflack, Azilroka, Darth Predator, Sinaris, Hydra, Merathilis, NihilisticPandemonium, Thurin'),
+								name = format('|cffffd200%s|r', CODING_STRING),
 							},
 						},
 					},
@@ -427,11 +494,11 @@ local function Core()
 						name = BUI:cOption(L['Testing & Inspiration']),
 						guiInline = true,
 						args = {
-							tukui = {
+							test = {
 								order = 1,
 								type = 'description',
 								fontSize = 'medium',
-								name = format('|cffffd200%s|r', 'Merathilis, Roxanne, BuG, Semprini, Vxt, V4NT0M, Obscurrium, Sikoru, ElvUI community'),
+								name = format('|cffffd200%s|r', TESTERS_STRING),
 							},
 						},
 					},
@@ -441,11 +508,23 @@ local function Core()
 						name = BUI:cOption(L['Donations']),
 						guiInline = true,
 						args = {
-							tukui = {
+							patreon = {
 								order = 1,
 								type = 'description',
 								fontSize = 'medium',
-								name = format('|cffffd200%s|r', DONATOR_STRING)
+								name = format('|cffff005aPatrons: |r|cffffd200%s\n|r', PATRONS_STRING)
+							},
+							paypal = {
+								order = 2,
+								type = 'description',
+								fontSize = 'medium',
+								name = format('|cff009fffPayPal: |r|cffffd200%s\n|r', DONATOR_STRING)
+							},
+							nitro = {
+								order = 3,
+								type = 'description',
+								fontSize = 'medium',
+								name = format('|cfff47fffDiscord Nitro Booster: |r|cffffd200%s|r', NITRO_STRING)
 							},
 						},
 					},
