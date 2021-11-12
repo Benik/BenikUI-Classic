@@ -9,7 +9,7 @@ local IsAddOnLoaded = IsAddOnLoaded
 -- GLOBALS: hooksecurefunc
 
 local function StyleTooltip()
-	GameTooltip:Style('Outside')
+	GameTooltip:BuiStyle('Outside')
 	GameTooltip.style:SetClampedToScreen(true)
 
 	GameTooltipStatusBar:SetFrameLevel(GameTooltip.style:GetFrameLevel() +2)
@@ -30,7 +30,9 @@ end
 
 local ttr, ttg, ttb = 0, 0, 0
 function mod:CheckTooltipStyleColor()
-	local r, g, b = GameTooltip.style.pixelBorders.CENTER:GetVertexColor()
+	if not GameTooltip.style then return end
+
+	local r, g, b = GameTooltip.style:GetBackdropColor()
 	ttr, ttg, ttb = r, g, b
 end
 

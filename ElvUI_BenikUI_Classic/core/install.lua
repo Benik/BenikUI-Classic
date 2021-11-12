@@ -314,48 +314,51 @@ local function SetupActionbars(layout)
 
 		E.db["actionbar"]["bar1"]["backdrop"] = false
 		E.db["actionbar"]["bar1"]["buttons"] = 12
-		E.db["actionbar"]["bar1"]["buttonsize"] = 30
-		E.db["actionbar"]["bar1"]["buttonspacing"] = 4
-		E.db["actionbar"]["bar1"]["backdropSpacing"] = 4
+		E.db["actionbar"]["bar1"]["buttonSize"] = 30
+		E.db["actionbar"]["bar1"]["buttonSpacing"] = 4
+		E.db["actionbar"]["bar1"]["backdropSpacing"] = 6
 		E.db["actionbar"]["bar1"]["buttonsPerRow"] = 12
 		E.db["actionbar"]["bar2"]["enabled"] = true
 		E.db["actionbar"]["bar2"]["backdrop"] = true
 		E.db["actionbar"]["bar2"]["buttons"] = 12
-		E.db["actionbar"]["bar2"]["buttonspacing"] = 4
+		E.db["actionbar"]["bar2"]["buttonSpacing"] = 4
 		E.db["actionbar"]["bar2"]["heightMult"] = 2
-		E.db["actionbar"]["bar2"]["buttonsize"] = 30
-		E.db["actionbar"]["bar2"]["backdropSpacing"] = 4
+		E.db["actionbar"]["bar2"]["buttonSize"] = 30
+		E.db["actionbar"]["bar2"]["backdropSpacing"] = 6
 		E.db["actionbar"]["bar2"]["buttonsPerRow"] = 12
 		E.db["actionbar"]["bar3"]["backdrop"] = true
 		E.db["actionbar"]["bar3"]["buttons"] = 10
 		E.db["actionbar"]["bar3"]["buttonsPerRow"] = 5
-		E.db["actionbar"]["bar3"]["buttonsize"] = 30
-		E.db["actionbar"]["bar3"]["buttonspacing"] = 4
-		E.db["actionbar"]["bar3"]["backdropSpacing"] = 4
+		E.db["actionbar"]["bar3"]["buttonSize"] = 30
+		E.db["actionbar"]["bar3"]["buttonSpacing"] = 4
+		E.db["actionbar"]["bar3"]["backdropSpacing"] = 6
+		E.db["actionbar"]["bar4"]["enabled"] = true
 		E.db["actionbar"]["bar4"]["backdrop"] = true
 		E.db["actionbar"]["bar4"]["buttons"] = 12
-		E.db["actionbar"]["bar4"]["buttonsize"] = 26
-		E.db["actionbar"]["bar4"]["buttonspacing"] = 4
+		E.db["actionbar"]["bar4"]["buttonSize"] = 26
+		E.db["actionbar"]["bar4"]["buttonSpacing"] = 4
 		E.db["actionbar"]["bar4"]["mouseover"] = true
-		E.db["actionbar"]["bar4"]["backdropSpacing"] = 4
+		E.db["actionbar"]["bar4"]["backdropSpacing"] = 6
 		E.db["actionbar"]["bar5"]["enabled"] = true
 		E.db["actionbar"]["bar5"]["backdrop"] = true
 		E.db["actionbar"]["bar5"]["buttons"] = 10
 		E.db["actionbar"]["bar5"]["buttonsPerRow"] = 5
-		E.db["actionbar"]["bar5"]["buttonsize"] = 30
-		E.db["actionbar"]["bar5"]["buttonspacing"] = 4
-		E.db["actionbar"]["bar5"]["backdropSpacing"] = 4
+		E.db["actionbar"]["bar5"]["buttonSize"] = 30
+		E.db["actionbar"]["bar5"]["buttonSpacing"] = 4
+		E.db["actionbar"]["bar5"]["backdropSpacing"] = 6
+		E.db["actionbar"]["bar5"]["heightMult"] = 1
+		E.db["actionbar"]["bar6"]["enabled"] = false
 		E.db["actionbar"]["barPet"]["backdrop"] = false
 		E.db["actionbar"]["barPet"]["buttonsPerRow"] = 10
-		E.db["actionbar"]["barPet"]["buttonsize"] = 22
-		E.db["actionbar"]["barPet"]["buttonspacing"] = 4
-		E.db["actionbar"]["stanceBar"]["buttonspacing"] = 2
+		E.db["actionbar"]["barPet"]["buttonSize"] = 22
+		E.db["actionbar"]["barPet"]["buttonSpacing"] = 4
+		E.db["actionbar"]["stanceBar"]["buttonSpacing"] = 2
 		E.db["actionbar"]["stanceBar"]["backdrop"] = false
-		E.db["actionbar"]["stanceBar"]["buttonsize"] = 24
+		E.db["actionbar"]["stanceBar"]["buttonSize"] = 24
 
 		E.db["benikui"]["actionbars"]["style"]["bar2"] = true
 		E.db["benikui"]["datatexts"]["middle"]["width"] = 414
-		E.db["databars"]["experience"]["width"] = 412
+		E.db["databars"]["experience"]["width"] = 414
 
 		-- movers
 		E.db["movers"]["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,97"
@@ -379,50 +382,51 @@ local function SetupActionbars(layout)
 
 		E.db["actionbar"]["bar1"]["backdrop"] = false
 		E.db["actionbar"]["bar1"]["buttons"] = 12
-		E.db["actionbar"]["bar1"]["buttonsize"] = 30
-		E.db["actionbar"]["bar1"]["buttonspacing"] = 4
-		E.db["actionbar"]["bar1"]["backdropSpacing"] = 4
+		E.db["actionbar"]["bar1"]["buttonSize"] = 30
+		E.db["actionbar"]["bar1"]["buttonSpacing"] = 4
+		E.db["actionbar"]["bar1"]["backdropSpacing"] = 6
 		E.db["actionbar"]["bar1"]["buttonsPerRow"] = 12
 		E.db["actionbar"]["bar2"]["buttons"] = 12
 		E.db["actionbar"]["bar2"]["backdrop"] = true
-		E.db["actionbar"]["bar2"]["buttonsize"] = 30
-		E.db["actionbar"]["bar2"]["buttonspacing"] = 4
+		E.db["actionbar"]["bar2"]["buttonSize"] = 30
+		E.db["actionbar"]["bar2"]["buttonSpacing"] = 4
 		E.db["actionbar"]["bar2"]["enabled"] = true
 		E.db["actionbar"]["bar2"]["heightMult"] = 2
-		E.db["actionbar"]["bar2"]["backdropSpacing"] = 3
+		E.db["actionbar"]["bar2"]["backdropSpacing"] = 6
 		E.db["actionbar"]["bar2"]["buttonsPerRow"] = 12
 		E.db["actionbar"]["bar3"]["backdrop"] = false
 		E.db["actionbar"]["bar3"]["buttons"] = 5
 		E.db["actionbar"]["bar3"]["buttonsPerRow"] = 5
-		E.db["actionbar"]["bar3"]["buttonsize"] = 19
-		E.db["actionbar"]["bar3"]["buttonspacing"] = 1
+		E.db["actionbar"]["bar3"]["buttonSize"] = 19
+		E.db["actionbar"]["bar3"]["buttonSpacing"] = 1
 		E.db["actionbar"]["bar3"]["backdropSpacing"] = 1
+		E.db["actionbar"]["bar4"]["enabled"] = true
 		E.db["actionbar"]["bar4"]["backdrop"] = true
 		E.db["actionbar"]["bar4"]["buttons"] = 12
-		E.db["actionbar"]["bar4"]["buttonsize"] = 26
-		E.db["actionbar"]["bar4"]["buttonspacing"] = 4
+		E.db["actionbar"]["bar4"]["buttonSize"] = 26
+		E.db["actionbar"]["bar4"]["buttonSpacing"] = 4
 		E.db["actionbar"]["bar4"]["mouseover"] = true
 		E.db["actionbar"]["bar5"]["enabled"] = true
-		E.db["actionbar"]["bar5"]["backdropSpacing"] = 4
+		E.db["actionbar"]["bar5"]["backdropSpacing"] = 6
 		E.db["actionbar"]["bar5"]["backdrop"] = false
 		E.db["actionbar"]["bar5"]["buttons"] = 5
 		E.db["actionbar"]["bar5"]["buttonsPerRow"] = 5
-		E.db["actionbar"]["bar5"]["buttonsize"] = 19
-		E.db["actionbar"]["bar5"]["buttonspacing"] = 1
+		E.db["actionbar"]["bar5"]["buttonSize"] = 19
+		E.db["actionbar"]["bar5"]["buttonSpacing"] = 1
 		E.db["actionbar"]["bar5"]["backdropSpacing"] = 1
-
-		E.db["actionbar"]["barPet"]["buttonspacing"] = 4
+		E.db["actionbar"]["bar6"]["enabled"] = false
+		E.db["actionbar"]["barPet"]["buttonSpacing"] = 4
 		E.db["actionbar"]["barPet"]["buttonsPerRow"] = 10
 		E.db["actionbar"]["barPet"]["backdrop"] = false
-		E.db["actionbar"]["barPet"]["buttonsize"] = 22
+		E.db["actionbar"]["barPet"]["buttonSize"] = 22
 
-		E.db["actionbar"]["stanceBar"]["buttonspacing"] = 2
+		E.db["actionbar"]["stanceBar"]["buttonSpacing"] = 2
 		E.db["actionbar"]["stanceBar"]["backdrop"] = false
-		E.db["actionbar"]["stanceBar"]["buttonsize"] = 24
+		E.db["actionbar"]["stanceBar"]["buttonSize"] = 24
 
 		E.db["benikui"]["actionbars"]["style"]["bar2"] = true
-		E.db["benikui"]["datatexts"]["middle"]["width"] = 412
-		E.db["databars"]["experience"]["width"] = 412
+		E.db["benikui"]["datatexts"]["middle"]["width"] = 416
+		E.db["databars"]["experience"]["width"] = 416
 
 		-- movers
 		E.db["movers"]["ArenaHeaderMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-56,346"
@@ -440,47 +444,48 @@ local function SetupActionbars(layout)
 		E.db["movers"]["ExperienceBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,97"
 
 	elseif layout == 'v3' then
-		E.db["actionbar"]["backdropSpacingConverted"] = true
-		E.db["actionbar"]["bar1"]["backdropSpacing"] = 4
+		E.db["actionbar"]["bar1"]["backdropSpacing"] = 6
 		E.db["actionbar"]["bar1"]["buttons"] = 10
 		E.db["actionbar"]["bar1"]["buttonsPerRow"] = 10
-		E.db["actionbar"]["bar1"]["buttonspacing"] = 4
-		E.db["actionbar"]["bar1"]["buttonsize"] = 32
+		E.db["actionbar"]["bar1"]["buttonSpacing"] = 4
+		E.db["actionbar"]["bar1"]["buttonSize"] = 32
 		E.db["actionbar"]["bar2"]["backdrop"] = true
-		E.db["actionbar"]["bar2"]["backdropSpacing"] = 4
+		E.db["actionbar"]["bar2"]["backdropSpacing"] = 6
 		E.db["actionbar"]["bar2"]["buttons"] = 10
 		E.db["actionbar"]["bar2"]["buttonsPerRow"] = 10
-		E.db["actionbar"]["bar2"]["buttonspacing"] = 4
+		E.db["actionbar"]["bar2"]["buttonSpacing"] = 4
 		E.db["actionbar"]["bar2"]["enabled"] = true
 		E.db["actionbar"]["bar2"]["heightMult"] = 2
-		E.db["actionbar"]["bar2"]["buttonsize"] = 32
+		E.db["actionbar"]["bar2"]["buttonSize"] = 32
 		E.db["actionbar"]["bar3"]["backdrop"] = true
-		E.db["actionbar"]["bar3"]["backdropSpacing"] = 4
+		E.db["actionbar"]["bar3"]["backdropSpacing"] = 6
 		E.db["actionbar"]["bar3"]["buttons"] = 12
 		E.db["actionbar"]["bar3"]["buttonsPerRow"] = 12
-		E.db["actionbar"]["bar3"]["buttonsize"] = 30
-		E.db["actionbar"]["bar3"]["buttonspacing"] = 4
-		E.db["actionbar"]["bar4"]["backdropSpacing"] = 4
-		E.db["actionbar"]["bar4"]["buttonsize"] = 26
-		E.db["actionbar"]["bar4"]["buttonspacing"] = 4
+		E.db["actionbar"]["bar3"]["buttonSize"] = 30
+		E.db["actionbar"]["bar3"]["buttonSpacing"] = 4
+		E.db["actionbar"]["bar4"]["enabled"] = true
+		E.db["actionbar"]["bar4"]["backdropSpacing"] = 6
+		E.db["actionbar"]["bar4"]["buttonSize"] = 26
+		E.db["actionbar"]["bar4"]["buttonSpacing"] = 4
 		E.db["actionbar"]["bar4"]["mouseover"] = true
-		E.db["actionbar"]["bar5"]["backdropSpacing"] = 4
+		E.db["actionbar"]["bar5"]["backdropSpacing"] = 6
 		E.db["actionbar"]["bar5"]["buttons"] = 7
 		E.db["actionbar"]["bar5"]["buttonsPerRow"] = 7
-		E.db["actionbar"]["bar5"]["buttonsize"] = 30
-		E.db["actionbar"]["bar5"]["buttonspacing"] = 4
+		E.db["actionbar"]["bar5"]["buttonSize"] = 30
+		E.db["actionbar"]["bar5"]["buttonSpacing"] = 4
 		E.db["actionbar"]["bar5"]["enabled"] = false
-		E.db["actionbar"]["bar6"]["buttonsize"] = 18
-		E.db["actionbar"]["barPet"]["backdropSpacing"] = 4
+		E.db["actionbar"]["bar6"]["buttonSize"] = 18
+		E.db["actionbar"]["bar6"]["enabled"] = false
+		E.db["actionbar"]["barPet"]["backdropSpacing"] = 6
 		E.db["actionbar"]["barPet"]["buttonsPerRow"] = 10
-		E.db["actionbar"]["barPet"]["buttonsize"] = 23
-		E.db["actionbar"]["barPet"]["buttonspacing"] = 4
+		E.db["actionbar"]["barPet"]["buttonSize"] = 23
+		E.db["actionbar"]["barPet"]["buttonSpacing"] = 4
 		E.db["actionbar"]["font"] = "Expressway"
 		E.db["actionbar"]["fontOutline"] = "OUTLINE"
-		E.db["actionbar"]["stanceBar"]["buttonsize"] = 24
+		E.db["actionbar"]["stanceBar"]["buttonSize"] = 24
 		E.db["benikui"]["actionbars"]["style"]["bar2"] = false
-		E.db["benikui"]["datatexts"]["middle"]["width"] = 414
-		E.db["databars"]["experience"]["width"] = 412
+		E.db["benikui"]["datatexts"]["middle"]["width"] = 416
+		E.db["databars"]["experience"]["width"] = 416
 		-- movers
 		E.db["movers"]["ArenaHeaderMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-56,346"
 		E.db["movers"]["BossButton"] = "BOTTOM,ElvUIParent,BOTTOM,0,362"
@@ -1876,8 +1881,8 @@ BUI.installTable = {
 	["tutorialImage"] = [[Interface\AddOns\ElvUI_BenikUI_Classic\media\textures\logo_benikui.tga]],
 	["Pages"] = {
 		[1] = function()
-			PluginInstallFrame:Style('Outside')
-			PluginInstallTitleFrame:Style('Outside')
+			PluginInstallFrame:BuiStyle('Outside')
+			PluginInstallTitleFrame:BuiStyle('Outside')
 			PluginInstallTutorialImage:Size(384, 96)
 			PluginInstallTutorialImage:Point('BOTTOM', 0, 100)
 			PluginInstallTitleFrame.text:SetFont(E["media"].normFont, 16, "OUTLINE")

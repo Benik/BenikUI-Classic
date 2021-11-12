@@ -200,33 +200,37 @@ function mod:ChangeDefaultOptions()
 	E.Options.args.unitframe.args.target.args.power.args.detachedWidth.min = ((E.db.unitframe.thinBorders or E.PixelMode) and 3 or 7)
 end
 
-function mod:Initialize()
-	if E.private.unitframe.enable ~= true then return end
-	self:UnitDefaults()
-	self:InitPlayer()
-	self:InitTarget()
-	self:InitPet()
-	self:InitTargetTarget()
+function mod:Setup()
+	mod:UnitDefaults()
+	mod:InitPlayer()
+	mod:InitTarget()
+	mod:InitPet()
+	mod:InitTargetTarget()
 
-	self:InitParty()
-	self:InitRaid()
-	self:InitRaid40()
+	mod:InitParty()
+	mod:InitRaid()
+	mod:InitRaid40()
 
-	self:ChangePowerBarTexture()
-	self:ChangeHealthBarTexture()
-	self:InfoPanelColor()
+	mod:ChangePowerBarTexture()
+	mod:ChangeHealthBarTexture()
+	mod:InfoPanelColor()
 
 	if BUI.ShadowMode then
-		self:UnitShadows()
-		self:PartyShadows()
-		self:RaidShadows()
-		self:Raid40Shadows()
-		self:TankShadows()
-		self:TankTargetShadows()
+		mod:UnitShadows()
+		mod:PartyShadows()
+		mod:RaidShadows()
+		mod:Raid40Shadows()
+		mod:TankShadows()
+		mod:TankTargetShadows()
 	end
+end
 
+function mod:Initialize()
+	if E.private.unitframe.enable ~= true then return end
+
+	hooksecurefunc(UF, "LoadUnits", mod.Setup)
 	hooksecurefunc(UF, "Configure_ReadyCheckIcon", mod.Configure_ReadyCheckIcon)
-	self:RegisterEvent("ADDON_LOADED")
+	mod:RegisterEvent("ADDON_LOADED")
 end
 
 BUI:RegisterModule(mod:GetName())

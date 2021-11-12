@@ -15,11 +15,11 @@ local function style_AuctionUI()
 	end
 
 	if _G["AuctionFrame"].backdrop then
-		_G["AuctionFrame"].backdrop:Style("Outside")
+		_G["AuctionFrame"].backdrop:BuiStyle("Outside")
 	end
 
-	_G["AuctionProgressFrame"]:Style("Outside")
-	_G["WowTokenGameTimeTutorial"]:Style("Small")
+	_G["AuctionProgressFrame"]:BuiStyle("Outside")
+	_G["WowTokenGameTimeTutorial"]:BuiStyle("Small")
 end
 S:AddCallbackForAddon("Blizzard_AuctionUI", "BenikUI_AuctionUI", style_AuctionUI)
 
@@ -32,7 +32,7 @@ local function style_BattlefieldMap()
 	end
 
 	if _G["BattlefieldMapFrame"].backdrop then
-		_G["BattlefieldMapFrame"].backdrop:Style("Outside")
+		_G["BattlefieldMapFrame"].backdrop:BuiStyle("Outside")
 	end
 end
 S:AddCallbackForAddon("Blizzard_BattlefieldMap", "BenikUI_BattlefieldMap", style_BattlefieldMap)
@@ -45,7 +45,7 @@ local function style_BindingUI()
 		return
 	end
 
-	_G["KeyBindingFrame"]:Style("Outside")
+	_G["KeyBindingFrame"]:BuiStyle("Outside")
 end
 S:AddCallbackForAddon("Blizzard_BindingUI", "BenikUI_BindingUI", style_BindingUI)
 
@@ -58,9 +58,9 @@ local function style_Channels()
 	end
 
 	if _G["ChannelFrame"].backdrop then
-		_G["ChannelFrame"].backdrop:Style("Outside")
+		_G["ChannelFrame"].backdrop:BuiStyle("Outside")
 	end
-	_G["CreateChannelPopup"]:Style("Outside")
+	_G["CreateChannelPopup"]:BuiStyle("Outside")
 end
 S:AddCallbackForAddon("Blizzard_Channels", "BenikUI_Channels", style_Channels)
 
@@ -74,8 +74,8 @@ local function style_Communities()
 
 	local frame = _G["CommunitiesFrame"]
 	if frame then
-		frame.backdrop:Style("Outside")
-		frame.NotificationSettingsDialog.backdrop:Style("Outside")
+		frame.backdrop:BuiStyle("Outside")
+		frame.NotificationSettingsDialog.backdrop:BuiStyle("Outside")
 	end
 end
 S:AddCallbackForAddon("Blizzard_Communities", "BenikUI_Communities", style_Communities)
@@ -118,7 +118,7 @@ local function style_InspectUI()
 	end
 
 	if _G["InspectFrame"].backdrop then
-		_G["InspectFrame"].backdrop:Style("Outside")
+		_G["InspectFrame"].backdrop:BuiStyle("Outside")
 	end
 end
 S:AddCallbackForAddon("Blizzard_InspectUI", "BenikUI_InspectUI", style_InspectUI)
@@ -131,7 +131,7 @@ local function style_ItemSocketingUI()
 		return
 	end
 
-	_G["ItemSocketingFrame"]:Style("Outside")
+	_G["ItemSocketingFrame"]:BuiStyle("Outside")
 end
 S:AddCallbackForAddon("Blizzard_ItemSocketingUI", "BenikUI_ItemSocketingUI", style_ItemSocketingUI)
 
@@ -143,8 +143,8 @@ local function style_MacroUI()
 		return
 	end
 
-	_G["MacroFrame"]:Style("Outside")
-	_G["MacroPopupFrame"]:Style("Outside")
+	_G["MacroFrame"]:BuiStyle("Outside")
+	_G["MacroPopupFrame"]:BuiStyle("Outside")
 end
 S:AddCallbackForAddon("Blizzard_MacroUI", "BenikUI_MacroUI", style_MacroUI)
 
@@ -157,13 +157,13 @@ local function style_TalentUI()
 	end
 
 	if _G["TalentFrame"].backdrop then
-		_G["TalentFrame"].backdrop:Style("Outside")
+		_G["TalentFrame"].backdrop:BuiStyle("Outside")
 	end
 
 	for i = 1, 5 do
 		local tab = _G["PlayerSpecTab" .. i]
 		if tab then
-			tab:Style("Inside")
+			tab:BuiStyle("Inside")
 			tab.style:SetFrameLevel(5)
 			tab:GetNormalTexture():SetTexCoord(unpack(BUI.TexCoords))
 			tab:GetNormalTexture():SetInside()
@@ -182,7 +182,7 @@ local function style_TradeSkillUI()
 
 	local frame = _G["TradeSkillFrame"]
 	if frame and frame.backdrop then
-		frame.backdrop:Style("Outside")
+		frame.backdrop:BuiStyle("Outside")
 	end
 end
 S:AddCallbackForAddon("Blizzard_TradeSkillUI", "BenikUI_TradeSkillUI", style_TradeSkillUI)
@@ -196,7 +196,7 @@ local function style_TrainerUI()
 	end
 
 	if _G["ClassTrainerFrame"].backdrop then
-		_G["ClassTrainerFrame"].backdrop:Style("Outside")
+		_G["ClassTrainerFrame"].backdrop:BuiStyle("Outside")
 	end
 end
 S:AddCallbackForAddon("Blizzard_TrainerUI", "BenikUI_TrainerUI", style_TrainerUI)

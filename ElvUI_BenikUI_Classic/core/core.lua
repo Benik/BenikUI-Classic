@@ -13,6 +13,7 @@ local GetAddOnEnableState = GetAddOnEnableState
 
 BUI["styles"] = {}
 BUI["softGlow"] = {}
+BUI["shadows"] = {}
 BUI.TexCoords = {.08, 0.92, -.08, 0.92}
 BUI.Version = GetAddOnMetadata('ElvUI_BenikUI_Classic', 'Version')
 BUI.ShadowMode = false;
@@ -140,6 +141,22 @@ function BUI:UpdateSoftGlowColor()
 			glow:SetBackdropBorderColor(sr, sg, sb, 0.6)
 		else
 			BUI["softGlow"][glow] = nil;
+		end
+	end
+end
+
+function BUI:UpdateShadows()
+	if BUI["shadows"] == nil then BUI["shadows"] = {} end
+	local db = E.db.benikui.general
+
+	for shadow, _ in pairs(BUI["shadows"]) do
+		if shadow then
+			shadow:SetOutside(shadow:GetParent(), (db.shadowSize - 1) or 2, (db.shadowSize - 1) or 2)
+			shadow:SetBackdrop({edgeFile = E.Media.Textures.GlowTex, edgeSize = E:Scale(db.shadowSize or 3)})
+			shadow:SetBackdropColor(0, 0, 0, 0)
+			shadow:SetBackdropBorderColor(0, 0, 0, db.shadowAlpha or 0.6)
+		else
+			BUI["shadows"][shadow] = nil;
 		end
 	end
 end

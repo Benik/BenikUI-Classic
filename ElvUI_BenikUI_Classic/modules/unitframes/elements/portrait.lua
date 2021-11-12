@@ -95,26 +95,26 @@ function BU:Configure_Portrait(frame, isPlayer)
 				if not frame.portraitmover.mover then
 					frame.portraitmover:ClearAllPoints()
 					if frame.unit == "player" then
-						frame.portraitmover:Point('TOPRIGHT', frame, 'TOPLEFT', -frame.BORDER, 0)
-						E:CreateMover(frame.portraitmover, 'PlayerPortraitMover', 'Player Portrait', nil, nil, nil, 'ALL,SOLO', nil, 'unitframe,player,generalGroup')
+						frame.portraitmover:Point('TOPRIGHT', frame, 'TOPLEFT', -UF.BORDER, 0)
+						E:CreateMover(frame.portraitmover, 'PlayerPortraitMover', 'Player Portrait', nil, nil, nil, 'ALL,SOLO,BENIKUI', nil, 'unitframe,player,generalGroup')
 					elseif frame.unit == "target" then
-						frame.portraitmover:Point('TOPLEFT', frame, 'TOPRIGHT', frame.BORDER, 0)
-						E:CreateMover(frame.portraitmover, 'TargetPortraitMover', 'Target Portrait', nil, nil, nil, 'ALL,SOLO', nil, 'unitframe,target,generalGroup')
+						frame.portraitmover:Point('TOPLEFT', frame, 'TOPRIGHT', UF.BORDER, 0)
+						E:CreateMover(frame.portraitmover, 'TargetPortraitMover', 'Target Portrait', nil, nil, nil, 'ALL,SOLO,BENIKUI', nil, 'unitframe,target,generalGroup')
 					elseif frame.unit == "targettarget" then
-						frame.portraitmover:Point('TOPLEFT', frame, 'TOPRIGHT', frame.BORDER, 0)
-						E:CreateMover(frame.portraitmover, 'TargetTargetPortraitMover', 'TargetTarget Portrait', nil, nil, nil, 'ALL,SOLO', nil, 'unitframe,targettarget,generalGroup')
+						frame.portraitmover:Point('TOPLEFT', frame, 'TOPRIGHT', UF.BORDER, 0)
+						E:CreateMover(frame.portraitmover, 'TargetTargetPortraitMover', 'TargetTarget Portrait', nil, nil, nil, 'ALL,SOLO,BENIKUI', nil, 'unitframe,targettarget,generalGroup')
 					elseif frame.unit == "focus" then
-						frame.portraitmover:Point('TOPLEFT', frame, 'TOPRIGHT', frame.BORDER, 0)
-						E:CreateMover(frame.portraitmover, 'FocusPortraitMover', 'Focus Portrait', nil, nil, nil, 'ALL,SOLO', nil, 'unitframe,focus,generalGroup')
+						frame.portraitmover:Point('TOPLEFT', frame, 'TOPRIGHT', UF.BORDER, 0)
+						E:CreateMover(frame.portraitmover, 'FocusPortraitMover', 'Focus Portrait', nil, nil, nil, 'ALL,SOLO,BENIKUI', nil, 'unitframe,focus,generalGroup')
 					elseif frame.unit == "pet" then
-						frame.portraitmover:Point('TOPLEFT', frame, 'TOPRIGHT', frame.BORDER, 0)
-						E:CreateMover(frame.portraitmover, 'PetPortraitMover', 'Pet Portrait', nil, nil, nil, 'ALL,SOLO', nil, 'unitframe,pet,generalGroup')
+						frame.portraitmover:Point('TOPLEFT', frame, 'TOPRIGHT', UF.BORDER, 0)
+						E:CreateMover(frame.portraitmover, 'PetPortraitMover', 'Pet Portrait', nil, nil, nil, 'ALL,SOLO,BENIKUI', nil, 'unitframe,pet,generalGroup')
 					end
 					frame.portraitmover:ClearAllPoints()
-					frame.portraitmover:SetPoint("BOTTOMLEFT", frame.portraitmover.mover, "BOTTOMLEFT")
+					frame.portraitmover:Point("BOTTOMLEFT", frame.portraitmover.mover, "BOTTOMLEFT")
 				else
 					frame.portraitmover:ClearAllPoints()
-					frame.portraitmover:SetPoint("BOTTOMLEFT", frame.portraitmover.mover, "BOTTOMLEFT")
+					frame.portraitmover:Point("BOTTOMLEFT", frame.portraitmover.mover, "BOTTOMLEFT")
 				end
 			else
 				portrait:SetAlpha(1)
@@ -126,22 +126,22 @@ function BU:Configure_Portrait(frame, isPlayer)
 				end
 
 				if frame.ORIENTATION == "LEFT" then
-					portrait.backdrop:Point("TOPLEFT", frame, "TOPLEFT", frame.SPACING, frame.PORTRAIT_HEIGHT or frame.USE_MINI_CLASSBAR and -(frame.CLASSBAR_YOFFSET+frame.SPACING) or -frame.SPACING)
+					portrait.backdrop:Point("TOPLEFT", frame, "TOPLEFT", UF.SPACING, frame.PORTRAIT_HEIGHT or frame.USE_MINI_CLASSBAR and -(frame.CLASSBAR_YOFFSET+UF.SPACING) or -UF.SPACING)
 					if frame.PORTRAIT_AND_INFOPANEL then
-						portrait.backdrop:Point("BOTTOMRIGHT", frame.InfoPanel, "BOTTOMLEFT", - frame.SPACING*3, -frame.BORDER)
+						portrait.backdrop:Point("BOTTOMRIGHT", frame.InfoPanel, "BOTTOMLEFT", - UF.SPACING*3, -UF.BORDER)
 					elseif frame.USE_MINI_POWERBAR or frame.USE_POWERBAR_OFFSET or not frame.USE_POWERBAR or frame.USE_INSET_POWERBAR or frame.POWERBAR_DETACHED then
-						portrait.backdrop:Point("BOTTOMRIGHT", frame.Health.backdrop, "BOTTOMLEFT", frame.BORDER - frame.SPACING*3, 0)
+						portrait.backdrop:Point("BOTTOMRIGHT", frame.Health.backdrop, "BOTTOMLEFT", UF.BORDER - UF.SPACING*3, 0)
 					else
-						portrait.backdrop:Point("BOTTOMRIGHT", frame.Power.backdrop, "BOTTOMLEFT", frame.BORDER - frame.SPACING*3, 0)
+						portrait.backdrop:Point("BOTTOMRIGHT", frame.Power.backdrop, "BOTTOMLEFT", UF.BORDER - UF.SPACING*3, 0)
 					end
 				elseif frame.ORIENTATION == "RIGHT" then
-					portrait.backdrop:Point("TOPRIGHT", frame, "TOPRIGHT", -frame.SPACING, frame.PORTRAIT_HEIGHT or frame.USE_MINI_CLASSBAR and -(frame.CLASSBAR_YOFFSET+frame.SPACING) or -frame.SPACING)
+					portrait.backdrop:Point("TOPRIGHT", frame, "TOPRIGHT", -UF.SPACING, frame.PORTRAIT_HEIGHT or frame.USE_MINI_CLASSBAR and -(frame.CLASSBAR_YOFFSET+UF.SPACING) or -UF.SPACING)
 					if frame.PORTRAIT_AND_INFOPANEL then
-						portrait.backdrop:Point("BOTTOMLEFT", frame.InfoPanel, "BOTTOMRIGHT", frame.SPACING*3, -frame.BORDER)
+						portrait.backdrop:Point("BOTTOMLEFT", frame.InfoPanel, "BOTTOMRIGHT", UF.SPACING*3, -UF.BORDER)
 					elseif frame.USE_MINI_POWERBAR or frame.USE_POWERBAR_OFFSET or not frame.USE_POWERBAR or frame.USE_INSET_POWERBAR or frame.POWERBAR_DETACHED then
-						portrait.backdrop:Point("BOTTOMLEFT", frame.Health.backdrop, "BOTTOMRIGHT", -frame.BORDER + frame.SPACING*3, 0)
+						portrait.backdrop:Point("BOTTOMLEFT", frame.Health.backdrop, "BOTTOMRIGHT", -UF.BORDER + UF.SPACING*3, 0)
 					else
-						portrait.backdrop:Point("BOTTOMLEFT", frame.Power.backdrop, "BOTTOMRIGHT", -frame.BORDER + frame.SPACING*3, 0)
+						portrait.backdrop:Point("BOTTOMLEFT", frame.Power.backdrop, "BOTTOMRIGHT", -UF.BORDER + UF.SPACING*3, 0)
 					end
 				end
 			end

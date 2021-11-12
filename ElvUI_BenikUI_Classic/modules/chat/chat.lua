@@ -40,7 +40,7 @@ end
 
 local CreatedFrames = 0;
 
-local function Style(self, frame)
+local function BuiStyle(self, frame)
 	CreatedFrames = frame:GetID()
 end
 
@@ -92,7 +92,7 @@ end
 function mod:Initialize()
 	hooksecurefunc(CH, "PositionChat", PositionChat)
 	hooksecurefunc(CH, "UpdateEditboxAnchors", mod.UpdateEditboxAnchors)
-	hooksecurefunc(CH, "StyleChat", Style)
+	hooksecurefunc(CH, "StyleChat", BuiStyle)
 	mod.UpdateEditboxAnchors()
 end
 

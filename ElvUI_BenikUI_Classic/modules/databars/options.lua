@@ -39,7 +39,7 @@ local function databarsTable()
 					buiStyle = {
 						order = 2,
 						type = 'toggle',
-						name = L['BenikUI Style'],
+						name = L['BenikUI BuiStyle'],
 						disabled = function() return not E.db.benikuiDatabars.experience.enable end,
 						desc = L['Show BenikUI decorative bars on the default ElvUI XP bar'],
 						get = function(info) return E.db.benikuiDatabars.experience.buiStyle end,
@@ -111,7 +111,7 @@ local function databarsTable()
 					buiStyle = {
 						order = 2,
 						type = 'toggle',
-						name = L['BenikUI Style'],
+						name = L['BenikUI BuiStyle'],
 						disabled = function() return not E.db.benikuiDatabars.reputation.enable end,
 						desc = L['Show BenikUI decorative bars on the default ElvUI Reputation bar'],
 						get = function(info) return E.db.benikuiDatabars.reputation.buiStyle end,

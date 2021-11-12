@@ -29,7 +29,7 @@ v1.14 - Jul 18 2020
 *Fixed Datatext options errors
 *Fixed Chat Datatexts toggle
 *Fixed the ParchmentRemover error during Install
-*Fixed a datatext error when Style is disabled
+*Fixed a datatext error when BuiStyle is disabled
 
 v1.13 - Jul 12 2020
 *Adopt ElvUI DataText changes
@@ -64,12 +64,12 @@ v1.08 - Dec 14 2019
 
 v1.07
 *Remove outdated stuff
-*Style 10 Actionbars
+*BuiStyle 10 Actionbars
 
 v1.06
 *Remove VAT profile
 *Disable itemQualityBorderColor during install
-*Style/Skin Spy addon
+*BuiStyle/Skin Spy addon
 *dirty Aurabars fix
 *Fix OpenMailFrame style
 *Set ElvUI min compatible version to 1.15

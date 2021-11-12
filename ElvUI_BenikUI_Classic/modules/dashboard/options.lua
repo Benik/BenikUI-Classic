@@ -394,7 +394,7 @@ local function dashboardsTable()
 							},
 							style = {
 								order = 5,
-								name = L['BenikUI Style'],
+								name = L['BenikUI BuiStyle'],
 								type = 'toggle',
 								disabled = function() return not E.db.dashboards.system.enableSystem end,
 								get = function(info) return E.db.dashboards.system.style end,
@@ -471,7 +471,7 @@ local function dashboardsTable()
 							},
 							style = {
 								order = 6,
-								name = L['BenikUI Style'],
+								name = L['BenikUI BuiStyle'],
 								type = 'toggle',
 								disabled = function() return not E.db.dashboards.professions.enableProfessions end,
 								get = function(info) return E.db.dashboards.professions.style end,
