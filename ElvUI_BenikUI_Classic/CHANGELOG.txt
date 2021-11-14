@@ -1,4 +1,7 @@
-v1.19 - Noe 13 2021
+v1.20 - Nov 14 2021
+*Fixed Style -> BuiStyle mass renaming issues
+
+v1.19 - Nov 13 2021
 *Updated for ElvUI v1.50
 
 v1.18 - Apr 4 2021
