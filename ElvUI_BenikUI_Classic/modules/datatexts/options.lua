@@ -62,7 +62,7 @@ local function Datatexts()
 					styled = {
 						order = 4,
 						type = 'toggle',
-						name = L['BenikUI Style'],
+						name = L['BenikUI BuiStyle'],
 						desc = L['Styles the chat datetexts and buttons only if both chat backdrops are set to "Hide Both".'],
 						disabled = function() return E.db.benikui.datatexts.chat.enable ~= true or E.db.benikui.general.benikuiStyle ~= true end,
 						get = function(info) return E.db.benikui.datatexts.chat[ info[#info] ] end,
@@ -110,7 +110,7 @@ local function Datatexts()
 					styled = {
 						order = 4,
 						type = 'toggle',
-						name = L['BenikUI Style'],
+						name = L['BenikUI BuiStyle'],
 						disabled = function() return E.db.benikui.datatexts.middle.enable ~= true or E.db.benikui.general.benikuiStyle ~= true end,
 						get = function(info) return E.db.benikui.datatexts.middle[ info[#info] ] end,
 						set = function(info, value) E.db.benikui.datatexts.middle[ info[#info] ] = value; BL:MiddleDatatextLayout(); end,
@@ -166,7 +166,7 @@ local DTPanelOptions = {
 			benikuiStyle = {
 				order = 1,
 				type = 'toggle',
-				name = L['BenikUI Style'],
+				name = L['BenikUI BuiStyle'],
 			},
 		},
 	},

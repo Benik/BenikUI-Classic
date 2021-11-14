@@ -8,7 +8,7 @@ function mod:BuildPanelFrame(name, db)
 	db = db or E.global.datatexts.customPanels[name] or DT:Panel_DefaultGlobalSettings(name)
 
 	local Panel = DT:FetchFrame(name)
-	Panel:Style('Outside')
+	Panel:BuiStyle('Outside')
 end
 
 function mod:UpdatePanelInfo(panelName, panel, ...)
@@ -17,7 +17,7 @@ function mod:UpdatePanelInfo(panelName, panel, ...)
 	if not db then return end
 
 	if not blacklist then
-		panel:Style('Outside')
+		panel:BuiStyle('Outside')
 		if db.benikuiStyle then
 			if panel.style then
 				panel.style:Show()
@@ -37,7 +37,7 @@ function mod:UpdatePanelInfo(panelName, panel, ...)
 end
 
 function mod:SetupTooltip(panel)
-	DT.tooltip:Style('Outside')
+	DT.tooltip:BuiStyle('Outside')
 end
 
 function mod:Initialize()

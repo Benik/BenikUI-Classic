@@ -160,7 +160,7 @@ function BUI:Dropmenu(list, frame, parent, pos, xOffset, yOffset, delay, addedSi
 
 	frame:SetHeight((#list * BUTTON_HEIGHT) + PADDING * 2)
 	frame:SetWidth(BUTTON_WIDTH + PADDING * 2 + (addedSize or 0))
-	frame:Style('Outside')
+	frame:BuiStyle('Outside')
 	frame:ClearAllPoints()
 	if pos == 'tLeft' then
 		frame:SetPoint('BOTTOMRIGHT', parent, 'TOPLEFT', xOffset, yOffset)

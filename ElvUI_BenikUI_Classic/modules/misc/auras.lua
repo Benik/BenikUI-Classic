@@ -10,7 +10,7 @@ A.CreateIconBui = A.CreateIcon
 function A:CreateIcon(button)
 	self:CreateIconBui(button)
 	if E.db.benikui.general.auras then
-		button:Style('Inside', _, true)
+		button:BuiStyle('Inside', _, true)
 		button.texture:SetTexCoord(unpack(BUI.TexCoords))
 	elseif E.db.benikui.general.benikuiStyle and E.db.benikui.general.shadows then
 		if not button.shadow then

@@ -19,7 +19,7 @@ local function SkadaDecor()
 	if not E.db.benikui.general.benikuiStyle or not E.db.benikuiSkins.addonSkins.skada then return end
 	hooksecurefunc(Skada.displays['bar'], 'ApplySettings', function(self, win)
 		local skada = win.bargroup
-		skada.Backdrop:Style('Outside')
+		skada.Backdrop:BuiStyle('Outside')
 		if win.db.enabletitle then
 			skada.button:StripTextures()
 		end
@@ -81,7 +81,7 @@ local function AtlasLootDecor()
 	local AtlasLootFrame = _G["AtlasLoot_GUI-Frame"]
 	if AtlasLootFrame then
 		if not AtlasLootFrame.style then
-			AtlasLootFrame:Style('Outside')
+			AtlasLootFrame:BuiStyle('Outside')
 		end
 	end
 end
@@ -94,7 +94,7 @@ local function DbmDecor(event)
 
 		if DBMRangeCheckRadar then
 			if not DBMRangeCheckRadar.style then
-				DBMRangeCheckRadar:Style('Inside')
+				DBMRangeCheckRadar:BuiStyle('Inside')
 			end
 
 			if AS:CheckOption('DBMRadarTrans') then
@@ -119,7 +119,7 @@ local function DbmDecor(event)
 		if DBMRangeCheck then
 			DBMRangeCheck:SetTemplate('Transparent')
 			if not DBMRangeCheck.style then
-				DBMRangeCheck:Style('Outside')
+				DBMRangeCheck:BuiStyle('Outside')
 			end
 		end
 	end
@@ -128,7 +128,7 @@ local function DbmDecor(event)
 		if DBM.Options.DontShowInfoFrame and (event or 0) ~= "test" then return end
 
 		if DBMInfoFrame and not DBMInfoFrame.style then
-			DBMInfoFrame:Style('Inside')
+			DBMInfoFrame:BuiStyle('Inside')
 		end
 	end
 
@@ -142,7 +142,7 @@ local function BugSackDecor()
 	hooksecurefunc(BugSack, "OpenSack", function()
 		if BugSackFrame.IsStyled then return end
 		if not BugSackFrame.style then
-			BugSackFrame:Style('Outside')
+			BugSackFrame:BuiStyle('Outside')
 		end
 		BugSackFrame.IsStyled = true
 	end)
@@ -153,7 +153,7 @@ local function LibrariesDecor()
 	if DBIcon and DBIcon.tooltip and DBIcon.tooltip:IsObjectType('GameTooltip') then
 		DBIcon.tooltip:HookScript("OnShow", function(self)
 			if not self.style then
-				self:Style('Outside')
+				self:BuiStyle('Outside')
 			end
 		end)
 	end
@@ -162,9 +162,9 @@ end
 local function ImmersionDecor()
 	if not E.db.benikui.general.benikuiStyle or not E.db.benikuiSkins.addonSkins.immersion then return end
 	local frame = _G['ImmersionFrame']
-	frame.TalkBox.BackgroundFrame.Backdrop:Style('Inside')
+	frame.TalkBox.BackgroundFrame.Backdrop:BuiStyle('Inside')
 	frame.TalkBox.Hilite:SetOutside(frame.TalkBox.BackgroundFrame.Backdrop)
-	frame.TalkBox.Elements.Backdrop:Style('Inside')
+	frame.TalkBox.Elements.Backdrop:BuiStyle('Inside')
 
 	if BUI.ShadowMode then
 		frame.TalkBox.BackgroundFrame.Backdrop.Shadow:Hide()
@@ -174,7 +174,7 @@ local function ImmersionDecor()
 	frame:HookScript('OnEvent', function(self)
 		for _, Button in ipairs(self.TitleButtons.Buttons) do
 			if Button.Backdrop and not Button.Backdrop.isStyled then
-				Button.Backdrop:Style('Inside')
+				Button.Backdrop:BuiStyle('Inside')
 				Button.Hilite:SetOutside(Button.Backdrop)
 				Button.Backdrop.Shadow:Hide()
 				Button.Backdrop.isStyled = true
@@ -186,7 +186,7 @@ end
 local function StyleSpyAddon()
 	local spy = _G["Spy_MainWindow"]
 	if spy then
-		spy:Style("Outside")
+		spy:BuiStyle("Outside")
 	end
 	AS:Desaturate(Spy_MainWindow.StatsButton) -- remove if added in AddonSkins
 end
@@ -196,7 +196,7 @@ local function StyleXtoLevel()
 
 	local xtoLevel = _G["XToLevel_AverageFrame_Classic"]
 	if xtoLevel then
-		xtoLevel:Style("Outside")
+		xtoLevel:BuiStyle("Outside")
 	end
 
 	local XtoLevelFrames = {
@@ -271,6 +271,6 @@ AS:RegisterSkin('Libraries', LibrariesDecor, 2)
 
 hooksecurefunc(AS, 'AcceptFrame', function(self)
 	if not _G["AcceptFrame"].style then
-		_G["AcceptFrame"]:Style('Outside')
+		_G["AcceptFrame"]:BuiStyle('Outside')
 	end
 end)
