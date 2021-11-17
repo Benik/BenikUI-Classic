@@ -323,7 +323,7 @@ local function skinZygor()
 			frame.isStyled = true
 		end
 	end
-	hooksecurefunc(ZGV.WhoWhere, "CreateMenuFrame", SkinFindNearest)
+	--hooksecurefunc(ZGV.WhoWhere, "CreateMenuFrame", SkinFindNearest)
 
 	local function SkinActionbar()
 		local frame = ZGV.ActionBar.Frame
