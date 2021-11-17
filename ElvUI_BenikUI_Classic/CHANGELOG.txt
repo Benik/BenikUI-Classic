@@ -1,3 +1,7 @@
+v1.21 - Nov 17 2021
+*Fixed Custom Datatexts Styling not applying after a reload
+*Avoid a Zygor skin error
+
 v1.20 - Nov 14 2021
 *Fixed Style -> BuiStyle mass renaming issues
 
