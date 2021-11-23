@@ -156,18 +156,8 @@ local function style_TalentUI()
 		return
 	end
 
-	if _G["TalentFrame"].backdrop then
-		_G["TalentFrame"].backdrop:BuiStyle("Outside")
-	end
-
-	for i = 1, 5 do
-		local tab = _G["PlayerSpecTab" .. i]
-		if tab then
-			tab:BuiStyle("Inside")
-			tab.style:SetFrameLevel(5)
-			tab:GetNormalTexture():SetTexCoord(unpack(BUI.TexCoords))
-			tab:GetNormalTexture():SetInside()
-		end
+	if _G["PlayerTalentFrame"].backdrop then
+		_G["PlayerTalentFrame"].backdrop:BuiStyle("Outside")
 	end
 end
 S:AddCallbackForAddon("Blizzard_TalentUI", "BenikUI_TalentUI", style_TalentUI)

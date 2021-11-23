@@ -1,3 +1,8 @@
+v1.22 - Nov 23 2021
+*Removed outdated stuff that was breaking Actionbar backdrops
+*Fixed the Game Menu button, when firing the Talent Frame
+*Fixed Talent Frame error
+
 v1.21 - Nov 17 2021
 *Fixed Custom Datatexts Styling not applying after a reload
 *Avoid a Zygor skin error
