@@ -299,14 +299,6 @@ local function ufPlayerTable()
 			},
 		},
 	}
-
-	E.Options.args.unitframe.args.individualUnits.args.player.args.power.args.vertical = {
-		order = 15,
-		type = "toggle",
-		name = BUI:cOption(L['Vertical']),
-		desc = L['Vertical power statusbar'],
-		disabled = function() return not E.db.unitframe.units.player.power.detachFromFrame end,
-	}
 end
 tinsert(BUI.Config, ufPlayerTable)
 
@@ -408,14 +400,6 @@ local function ufTargetTable()
 				},
 			},
 		},
-	}
-
-	E.Options.args.unitframe.args.individualUnits.args.target.args.power.args.vertical = {
-		order = 15,
-		type = "toggle",
-		name = BUI:cOption(L['Vertical']),
-		desc = L['Vertical power statusbar'],
-		disabled = function() return not E.db.unitframe.units.target.power.detachFromFrame end,
 	}
 end
 tinsert(BUI.Config, ufTargetTable)
