@@ -1,3 +1,10 @@
+v1.23 - Nov 25 2021
+*Updated the GitHub links
+*Updated Donors/Patrons list
+*Unitframes update
+*flightMode cleanup
+*Yet another obsolete code that breaks flightMode
+
 v1.22 - Nov 23 2021
 *Removed outdated stuff that was breaking Actionbar backdrops
 *Fixed the Game Menu button, when firing the Talent Frame

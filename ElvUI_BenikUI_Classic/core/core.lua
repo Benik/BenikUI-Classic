@@ -179,7 +179,7 @@ function BUI:Initialize()
 	end
 
 	if E.db.benikui.general.loginMessage then
-		print(BUI.Title..format('v|cff00c0fa%s|r',BUI.Version)..L[' is loaded. For any issues or suggestions, please visit ']..PrintURL('https://git.tukui.org/Benik/benikui_classic/issues'))
+		print(BUI.Title..format('v|cff00c0fa%s|r',BUI.Version)..L[' is loaded. For any issues or suggestions, please visit ']..PrintURL('https://github.com/Benik/BenikUI-Classic/issues'))
 	end
 
 	if E.db.benikui.general.benikuiStyle and E.db.benikui.general.shadows then

@@ -328,22 +328,6 @@ function mod:SetFlightMode(status)
 end
 
 function mod:OnEvent(event, ...)
-	local forbiddenArea = BUI:CheckFlightMapID()
-
-	if forbiddenArea then return end
-
-	if(event == "LFG_PROPOSAL_SHOW" or event == "UPDATE_BATTLEFIELD_STATUS") then
-		if(event == "UPDATE_BATTLEFIELD_STATUS") then
-			local status = GetBattlefieldStatus(...);
-			if ( status == "confirm" ) then
-				self:SetFlightMode(false)
-			end
-		else
-			self:SetFlightMode(false)
-		end
-		return
-	end
-
 	if IsInInstance() then return end
 
 	if (UnitOnTaxi("player")) then
@@ -356,15 +340,9 @@ end
 function mod:Toggle()
 	if(E.db.benikui.misc.flightMode) then
 		self:RegisterEvent("UPDATE_BONUS_ACTIONBAR", "OnEvent")
-		--self:RegisterEvent("UPDATE_MULTI_CAST_ACTIONBAR", "OnEvent")
-		--self:RegisterEvent("LFG_PROPOSAL_SHOW", "OnEvent")
-		--self:RegisterEvent("UPDATE_BATTLEFIELD_STATUS", "OnEvent")
 		BUI:LoadInFlightProfile(true)
 	else
 		self:UnregisterEvent("UPDATE_BONUS_ACTIONBAR")
-		--self:UnregisterEvent("UPDATE_MULTI_CAST_ACTIONBAR")
-		--self:UnregisterEvent("LFG_PROPOSAL_SHOW")
-		--self:UnregisterEvent("UPDATE_BATTLEFIELD_STATUS")
 		BUI:LoadInFlightProfile(false)
 	end
 end

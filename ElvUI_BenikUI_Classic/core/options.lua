@@ -51,7 +51,10 @@ local DONATORS = {
 	'Lisa T.',
 	'Vlad P.',
 	'Esa L.',
+	'Ascor',
+	'David R.',
 	'Max M.',
+	'Misaligned',
 }
 tsort(DONATORS, function(a, b) return E:StripString(a) < E:StripString(b) end)
 local DONATOR_STRING = tconcat(DONATORS, ", ")
@@ -63,7 +66,6 @@ local PATRONS = {
 	'Rezzurect',
 	'Blom',
 	'bazooka',
-	'Ascor',
 	'beyornd',
 	'bneusbaum',
 }
@@ -440,7 +442,7 @@ local function Core()
 								order = 2,
 								type = 'execute',
 								name = L['Git Ticket tracker'],
-								func = function() StaticPopup_Show("BENIKUI_CREDITS", nil, nil, "https://git.tukui.org/Benik/benikui_classic/issues") end,
+								func = function() StaticPopup_Show("BENIKUI_CREDITS", nil, nil, "https://github.com/Benik/BenikUI-Classic/issues") end,
 							},
 							discord = {
 								order = 3,
@@ -466,13 +468,13 @@ local function Core()
 								order = 2,
 								type = 'execute',
 								name = L['Curseforge'],
-								func = function() StaticPopup_Show("BENIKUI_CREDITS", nil, nil, "https://www.curseforge.com/wow/addons/benikui-v3") end,
+								func = function() StaticPopup_Show("BENIKUI_CREDITS", nil, nil, "https://www.curseforge.com/wow/addons/benikui") end,
 							},
 							beta = {
 								order = 3,
 								type = 'execute',
 								name = L['Beta versions'],
-								func = function() StaticPopup_Show("BENIKUI_CREDITS", nil, nil, "https://git.tukui.org/Benik/benikui_classic/-/archive/development/benikui_classic-development.zip") end,
+								func = function() StaticPopup_Show("BENIKUI_CREDITS", nil, nil, "https://github.com/Benik/BenikUI-Classic/archive/refs/heads/development.zip") end,
 							},
 						},
 					},
